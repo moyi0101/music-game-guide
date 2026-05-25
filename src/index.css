@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0F0D24 0%, #1E1B4B 50%, #0F0D24 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1B4B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6B21A8, #EC4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7C3AED, #F472B6);
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #EC4899, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-festival {
+    background: linear-gradient(135deg, #6B21A8 0%, #EC4899 50%, #06B6D4 100%);
+  }
+
+  .card-glow {
+    box-shadow: 0 0 20px rgba(107, 33, 168, 0.3), 0 0 40px rgba(236, 72, 153, 0.2);
+  }
+
+  .card-glow-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(107, 33, 168, 0.5), 0 0 60px rgba(236, 72, 153, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, #6B21A8, #EC4899);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, #7C3AED, #F472B6);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+    transform: translateY(-2px);
+  }
+}
